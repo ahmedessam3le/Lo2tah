@@ -52,15 +52,15 @@ class _HomeViewState extends State<HomeView> {
                 child: Column(
                   children: [
                     Expanded(
-                      flex: 5,
+                      flex: 1,
                       child: MobileScanner(
                         controller: _viewModel.controller,
                         overlayBuilder: (context, constraints) {
                           return LayoutBuilder(
                             builder: (context, constraints) {
                               final scanArea = Size(
-                                constraints.maxWidth * 0.7,
-                                constraints.maxHeight * 0.7,
+                                constraints.maxWidth * 0.9,
+                                constraints.maxHeight * 0.8,
                               );
                               final scanOffset = Offset(
                                 (constraints.maxWidth - scanArea.width) / 2,
@@ -71,7 +71,7 @@ class _HomeViewState extends State<HomeView> {
                                 painter: CornerOverlayPainter(
                                   scanArea: scanArea,
                                   scanOffset: scanOffset,
-                                  cornerLength: 40.h,
+                                  cornerLength: 20.h,
                                   cornerWidth: 4.w,
                                   cornerColor: ColorsManager.lightPrimaryColor,
                                 ),
@@ -86,7 +86,7 @@ class _HomeViewState extends State<HomeView> {
                         onDetect: (capture) => _viewModel.onDetect(capture),
                       ),
                     ),
-                    Expanded(flex: 4, child: Container()),
+                    Expanded(flex: 2, child: Container()),
                   ],
                 ),
               ),
