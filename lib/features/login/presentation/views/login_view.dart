@@ -103,14 +103,14 @@ class _LoginViewState extends State<LoginView> {
                                       keyboardType: TextInputType.emailAddress,
                                       textInputAction: TextInputAction.next,
                                       onValidate: MultiValidator([
-                                        RequiredValidator(
-                                          errorText: AppStrings.requiredField
-                                              .tr(),
-                                        ),
-                                        EmailValidator(
-                                          errorText: AppStrings.invalidEmail
-                                              .tr(),
-                                        ),
+                                        // RequiredValidator(
+                                        //   errorText: AppStrings.requiredField
+                                        //       .tr(),
+                                        // ),
+                                        // EmailValidator(
+                                        //   errorText: AppStrings.invalidEmail
+                                        //       .tr(),
+                                        // ),
                                       ]).call,
                                       labelText: AppStrings.email.tr(),
                                       prefixIcon: Icons.person,
@@ -125,15 +125,15 @@ class _LoginViewState extends State<LoginView> {
                                           TextInputType.visiblePassword,
                                       textInputAction: TextInputAction.done,
                                       onValidate: MultiValidator([
-                                        RequiredValidator(
-                                          errorText: AppStrings.requiredField
-                                              .tr(),
-                                        ),
-                                        MinLengthValidator(
-                                          8,
-                                          errorText: AppStrings.shortPassword
-                                              .tr(),
-                                        ),
+                                        // RequiredValidator(
+                                        //   errorText: AppStrings.requiredField
+                                        //       .tr(),
+                                        // ),
+                                        // MinLengthValidator(
+                                        //   8,
+                                        //   errorText: AppStrings.shortPassword
+                                        //       .tr(),
+                                        // ),
                                       ]).call,
                                       labelText: AppStrings.password.tr(),
                                       prefixIcon: Icons.lock,
