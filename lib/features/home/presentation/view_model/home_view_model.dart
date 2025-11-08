@@ -21,8 +21,14 @@ class HomeViewModel extends Cubit<HomeViewStates> {
   AudioPlayer? _audioPlayer;
 
   Future<void> init() async {
+    controller = MobileScannerController(
+      autoStart: true,
+      detectionSpeed: DetectionSpeed.normal,
+      detectionTimeoutMs: 2000,
+      autoZoom: true,
+      torchEnabled: false,
+    );
     _audioPlayer = AudioPlayer();
-    // Load the audio file
     await _audioPlayer?.setAsset('assets/audio/beep.mp3');
     audioPlayer = AudioPlayer();
     await audioPlayer!.setVolume(1);
@@ -44,7 +50,6 @@ class HomeViewModel extends Cubit<HomeViewStates> {
       playDetectSound();
       barcodes = capture.barcodes;
       final barcode = barcodes.last;
-      // await _playDetectSound();
       emit(HomeBarcodeLoadedState(barcode));
     } catch (e, s) {
       Logger.print(title: 'onQRViewCreated Error', message: s.toString());
