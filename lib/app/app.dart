@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:purity/app/app_bloc_observer.dart';
-import 'package:purity/app/service_locator.dart';
+import 'package:lo2tah/app/app_bloc_observer.dart';
+import 'package:lo2tah/app/service_locator.dart';
 
 import '../config/locale/locale_manager.dart';
 import '../config/routes/app_navigator.dart';
@@ -40,20 +40,20 @@ Future<Widget> initializeApp(Flavor flavor) async {
     fallbackLocale: AppConstants.englishLocale,
     startLocale: serviceLocator<LocaleManager>().getLocale(),
     saveLocale: true,
-    child: PurityApp(flavor),
+    child: lo2tahApp(flavor),
   );
 }
 
-class PurityApp extends StatefulWidget {
+class lo2tahApp extends StatefulWidget {
   final Flavor flavor;
 
-  const PurityApp(this.flavor, {Key? key}) : super(key: key);
+  const lo2tahApp(this.flavor, {Key? key}) : super(key: key);
 
   @override
-  State<PurityApp> createState() => _PurityAppState();
+  State<lo2tahApp> createState() => _lo2tahAppState();
 }
 
-class _PurityAppState extends State<PurityApp> {
+class _lo2tahAppState extends State<lo2tahApp> {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(

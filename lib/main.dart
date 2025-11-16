@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:purity/core/enums/flavor_enum.dart';
+import 'package:lo2tah/core/enums/flavor_enum.dart';
 
 import 'app/app.dart';
 

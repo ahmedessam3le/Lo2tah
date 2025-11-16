@@ -1,14 +1,17 @@
 import 'dart:ui';
 
-import 'package:purity/app/service_locator.dart';
-import 'package:purity/core/caching/caching_client.dart';
-import 'package:purity/core/enums/caching_keys.dart';
+import 'package:lo2tah/app/service_locator.dart';
+import 'package:lo2tah/core/caching/caching_client.dart';
+import 'package:lo2tah/core/enums/caching_keys.dart';
 
 import '../../core/utils/constants_manager.dart';
 
 class LocaleManager {
   Locale getLocale() {
-    switch (serviceLocator<CachingClient>().get(key: CachingKeys.languageCode.value) ?? PlatformDispatcher.instance.locales.first.languageCode) {
+    switch (serviceLocator<CachingClient>().get(
+          key: CachingKeys.languageCode.value,
+        ) ??
+        PlatformDispatcher.instance.locales.first.languageCode) {
       case CachingKeys.enLangCode:
         return AppConstants.englishLocale;
 
@@ -21,6 +24,9 @@ class LocaleManager {
   }
 
   void setLocale(Locale locale) {
-    serviceLocator<CachingClient>().set(key: CachingKeys.languageCode.value, value: locale.languageCode);
+    serviceLocator<CachingClient>().set(
+      key: CachingKeys.languageCode.value,
+      value: locale.languageCode,
+    );
   }
 }

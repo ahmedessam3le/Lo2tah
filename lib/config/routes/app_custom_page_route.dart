@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:purity/config/routes/app_routes.dart';
+import 'package:lo2tah/config/routes/app_routes.dart';
 
 class AppCustomPageRoute<T> extends MaterialPageRoute<T> {
   AppCustomPageRoute({required super.builder, super.settings});

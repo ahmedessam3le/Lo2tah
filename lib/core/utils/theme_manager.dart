@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:purity/core/utils/colors_manager.dart';
-import 'package:purity/core/utils/text_styles_manager.dart';
+import 'package:lo2tah/core/utils/colors_manager.dart';
+import 'package:lo2tah/core/utils/text_styles_manager.dart';
 
 /// appTheme is used to handle the ui flavor of the most used widgets
 

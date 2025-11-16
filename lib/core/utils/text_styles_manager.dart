@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:purity/core/utils/font_manager.dart';
+import 'package:lo2tah/core/utils/font_manager.dart';
 
 import 'colors_manager.dart';
 

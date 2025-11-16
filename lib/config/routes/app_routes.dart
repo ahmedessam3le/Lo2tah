@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:purity/config/routes/app_custom_page_route.dart';
-import 'package:purity/features/change_password/presentation/views/change_password_view.dart';
-import 'package:purity/features/home/presentation/views/home_view.dart';
+import 'package:lo2tah/config/routes/app_custom_page_route.dart';
+import 'package:lo2tah/features/change_password/presentation/views/change_password_view.dart';
+import 'package:lo2tah/features/home/presentation/views/home_view.dart';
 
 import '../../core/utils/strings_manager.dart';
 import '../../features/login/presentation/views/login_view.dart';

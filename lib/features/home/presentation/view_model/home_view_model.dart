@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:purity/config/log/logger.dart';
-import 'package:purity/features/home/presentation/view_model/home_view_states.dart';
+import 'package:lo2tah/config/log/logger.dart';
+import 'package:lo2tah/features/home/presentation/view_model/home_view_states.dart';
 
 class HomeViewModel extends Cubit<HomeViewStates> {
   HomeViewModel() : super(HomeInitialState());

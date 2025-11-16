@@ -1,5 +1,5 @@
-name: purity
-description: "Purity is an Arabic app that aims to enable users to transparently understand the ingredients of food products. With a simple barcode scan, you can discover nutritional facts, allergens, and chemical additives—making informed choices that are best for your health and the environment."
+name: lo2tah
+description: "lo2tah is an Arabic app that aims to enable users to transparently understand the ingredients of food products. With a simple barcode scan, you can discover nutritional facts, allergens, and chemical additives—making informed choices that are best for your health and the environment."
 
 version: 1.0.1+1
 
@@ -46,6 +46,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  change_app_package_name: ^1.5.0
+  rename: ^3.1.0
+
 
 flutter:
   uses-material-design: true

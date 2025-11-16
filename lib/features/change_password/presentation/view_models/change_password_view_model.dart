@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:purity/features/change_password/presentation/view_models/change_password_states.dart';
+import 'package:lo2tah/features/change_password/presentation/view_models/change_password_states.dart';
 
 class ChangePasswordViewModel extends Cubit<ChangePasswordStates> {
   ChangePasswordViewModel() : super(ChangePasswordInitialState());

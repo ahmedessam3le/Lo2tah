@@ -2,16 +2,16 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lo2tah/app/service_locator.dart';
+import 'package:lo2tah/config/routes/app_navigator.dart';
+import 'package:lo2tah/core/utils/colors_manager.dart';
+import 'package:lo2tah/core/utils/strings_manager.dart';
+import 'package:lo2tah/core/widgets/app_dialogs.dart';
+import 'package:lo2tah/core/widgets/spacing.dart';
+import 'package:lo2tah/features/home/presentation/view_model/home_view_model.dart';
+import 'package:lo2tah/features/home/presentation/view_model/home_view_states.dart';
+import 'package:lo2tah/features/home/presentation/widgets/corner_overlay_painter.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
-import 'package:purity/app/service_locator.dart';
-import 'package:purity/config/routes/app_navigator.dart';
-import 'package:purity/core/utils/colors_manager.dart';
-import 'package:purity/core/utils/strings_manager.dart';
-import 'package:purity/core/widgets/app_dialogs.dart';
-import 'package:purity/core/widgets/spacing.dart';
-import 'package:purity/features/home/presentation/view_model/home_view_model.dart';
-import 'package:purity/features/home/presentation/view_model/home_view_states.dart';
-import 'package:purity/features/home/presentation/widgets/corner_overlay_painter.dart';
 
 import '../../../../core/utils/assets_manager.dart';
 
@@ -50,11 +50,11 @@ class _HomeViewState extends State<HomeView> {
         builder: (_, state) {
           return Scaffold(
             extendBody: true,
-            body: Visibility(
-              visible: _viewModel.isCameraPermissionGranted ?? false,
-              child: Column(
-                children: [
-                  Expanded(
+            body: Column(
+              children: [
+                Visibility(
+                  visible: _viewModel.isCameraPermissionGranted ?? false,
+                  child: Expanded(
                     flex: 1,
                     child: MobileScanner(
                       controller: _viewModel.controller,
@@ -89,50 +89,50 @@ class _HomeViewState extends State<HomeView> {
                       onDetect: (capture) => _viewModel.onDetect(capture),
                     ),
                   ),
-                  Expanded(
-                    flex: 2,
-                    child: ListView(
-                      children: [
-                        Container(
-                          height: 400.h,
-                          decoration: BoxDecoration(
-                            color: ColorsManager.warmYellowColor,
-                            borderRadius: BorderRadius.circular(10.r),
-                            boxShadow: [
-                              BoxShadow(
-                                color: ColorsManager.offWhiteColor.withValues(
-                                  alpha: .9,
-                                ),
-                                spreadRadius: 5,
-                                blurRadius: 7,
-                                offset: const Offset(
-                                  0,
-                                  3,
-                                ), // changes position of shadow
+                ),
+                Expanded(
+                  flex: 2,
+                  child: ListView(
+                    children: [
+                      Container(
+                        height: 400.h,
+                        decoration: BoxDecoration(
+                          color: ColorsManager.warmYellowColor,
+                          borderRadius: BorderRadius.circular(10.r),
+                          boxShadow: [
+                            BoxShadow(
+                              color: ColorsManager.offWhiteColor.withValues(
+                                alpha: .9,
                               ),
-                            ],
-                          ),
-                          margin: EdgeInsets.symmetric(horizontal: 10.r),
-                          padding: EdgeInsets.all(20.r),
-                          child: Column(
-                            children: [
-                              Image.asset(
-                                ImageAssetsManager.appLogo,
-                                width: 200.w,
-                                fit: BoxFit.cover,
-                              ),
-                              Spacing.vSize(20.h),
-                              Text(
-                                'Welcome to our app, we are so happy to have you here!',
-                              ),
-                            ],
-                          ),
+                              spreadRadius: 5,
+                              blurRadius: 7,
+                              offset: const Offset(
+                                0,
+                                3,
+                              ), // changes position of shadow
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                        margin: EdgeInsets.symmetric(horizontal: 10.r),
+                        padding: EdgeInsets.all(20.r),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              ImageAssetsManager.appLogo,
+                              width: 200.w,
+                              fit: BoxFit.cover,
+                            ),
+                            Spacing.vSize(20.h),
+                            Text(
+                              'Welcome to our app, we are so happy to have you here!',
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           );
         },

@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:purity/core/widgets/app_dialogs.dart';
+import 'package:lo2tah/core/widgets/app_dialogs.dart';
 
 import '../utils/strings_manager.dart';
 
@@ -19,7 +19,8 @@ class OnWillPopDialog {
       confirmButtonColor: Theme.of(context).primaryColorDark,
       onConfirmButtonPressed: () => SystemNavigator.pop(),
       cancelButtonLabel: AppStrings.no.tr(),
-      onCancelButtonPressed: () => Navigator.of(context, rootNavigator: true).pop(),
+      onCancelButtonPressed: () =>
+          Navigator.of(context, rootNavigator: true).pop(),
     );
   }
 }

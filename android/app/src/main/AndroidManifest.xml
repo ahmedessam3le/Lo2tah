@@ -7,7 +7,7 @@
 
 
     <application
-            android:label="purity"
+            android:label="Lo2tah"
             android:name="${applicationName}"
             android:icon="@mipmap/ic_launcher">
         <activity

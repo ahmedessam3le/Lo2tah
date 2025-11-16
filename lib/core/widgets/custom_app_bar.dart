@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:purity/config/routes/app_navigator.dart';
-
+import 'package:lo2tah/config/routes/app_navigator.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -11,7 +10,15 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool? isCenterTitle;
   final PreferredSizeWidget? bottomTabBar;
 
-  const CustomAppBar({super.key, required this.title, this.showBackButton = false, this.actions, this.leading, this.bottomTabBar, this.isCenterTitle});
+  const CustomAppBar({
+    super.key,
+    required this.title,
+    this.showBackButton = false,
+    this.actions,
+    this.leading,
+    this.bottomTabBar,
+    this.isCenterTitle,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +31,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(title, maxLines: 1, overflow: TextOverflow.ellipsis),
       leading: showBackButton
           ? IconButton(
-              icon:  Icon(Icons.arrow_back_ios, size: 27.r),
+              icon: Icon(Icons.arrow_back_ios, size: 27.r),
               color: Theme.of(context).indicatorColor,
               onPressed: () {
                 AppNavigator.pop(context);

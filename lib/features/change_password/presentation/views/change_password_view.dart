@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-import 'package:purity/config/routes/app_navigator.dart';
-import 'package:purity/core/widgets/app_dialogs.dart';
-import 'package:purity/core/widgets/app_toasts.dart';
-import 'package:purity/core/widgets/spacing.dart';
+import 'package:lo2tah/config/routes/app_navigator.dart';
+import 'package:lo2tah/core/widgets/app_dialogs.dart';
+import 'package:lo2tah/core/widgets/app_toasts.dart';
+import 'package:lo2tah/core/widgets/spacing.dart';
 
 import '../../../../app/service_locator.dart';
 import '../../../../core/utils/assets_manager.dart';

@@ -5,7 +5,8 @@ const String imagesPath = 'assets/images';
 const String translationsPath = 'assets/translations';
 
 class ImageAssetsManager {
-  static const String splashLogo = '$imagesPath/app_logo.png';
+  static const String appLogo = '$imagesPath/app_logo.png';
+  static const String splashLogo = '$imagesPath/splash_logo.png';
   static const String boardingOneIC = '$imagesPath/boarding-1.svg';
   static const String boardingTwoIC = '$imagesPath/boarding-2.svg';
   static const String boardingThreeIC = '$imagesPath/boarding-3.svg';

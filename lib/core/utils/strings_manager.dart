@@ -5,7 +5,7 @@ library;
 class AppStrings {
   // Core
 
-  static const String appName = 'Purity';
+  static const String appName = 'lo2tah';
   static const String noRouteFound = 'No Route Found';
 
   static const String onBoardingOne = 'onBoarding_one';

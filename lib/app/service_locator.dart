@@ -2,11 +2,11 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
-import 'package:purity/app/app_flavor.dart';
-import 'package:purity/core/caching/caching_client.dart';
-import 'package:purity/core/caching/shared_prefs_client.dart';
-import 'package:purity/features/change_password/presentation/view_models/change_password_view_model.dart';
-import 'package:purity/features/home/presentation/view_model/home_view_model.dart';
+import 'package:lo2tah/app/app_flavor.dart';
+import 'package:lo2tah/core/caching/caching_client.dart';
+import 'package:lo2tah/core/caching/shared_prefs_client.dart';
+import 'package:lo2tah/features/change_password/presentation/view_models/change_password_view_model.dart';
+import 'package:lo2tah/features/home/presentation/view_model/home_view_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../config/locale/locale_manager.dart';

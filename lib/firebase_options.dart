@@ -53,17 +53,16 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyANw8rgjgV6MnISvfbMeZq-mIueV3ZGxwE',
     appId: '1:733733637103:android:3ca8784d068906963fc41a',
     messagingSenderId: '733733637103',
-    projectId: 'purity-cd38a',
-    storageBucket: 'purity-cd38a.firebasestorage.app',
+    projectId: 'lo2tah-cd38a',
+    storageBucket: 'lo2tah-cd38a.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAzKkRwxwujaqyExijUnMBhjOAEyCUHUpo',
     appId: '1:733733637103:ios:fe12ab489e04d4363fc41a',
     messagingSenderId: '733733637103',
-    projectId: 'purity-cd38a',
-    storageBucket: 'purity-cd38a.firebasestorage.app',
-    iosBundleId: 'com.example.purity',
+    projectId: 'lo2tah-cd38a',
+    storageBucket: 'lo2tah-cd38a.firebasestorage.app',
+    iosBundleId: 'com.example.lo2tah',
   );
-
 }

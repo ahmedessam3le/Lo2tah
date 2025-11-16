@@ -1,4 +1,4 @@
-import 'package:purity/core/caching/caching_client.dart';
+import 'package:lo2tah/core/caching/caching_client.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreferenceClient implements CachingClient {

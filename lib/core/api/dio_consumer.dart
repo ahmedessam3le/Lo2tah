@@ -7,10 +7,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:purity/core/api/api_consumer.dart';
-import 'package:purity/core/api/app_interceptors.dart';
-import 'package:purity/core/api/end_points.dart';
-import 'package:purity/core/api/status_codes.dart';
+import 'package:lo2tah/core/api/api_consumer.dart';
+import 'package:lo2tah/core/api/app_interceptors.dart';
+import 'package:lo2tah/core/api/end_points.dart';
+import 'package:lo2tah/core/api/status_codes.dart';
 
 import '../../app/service_locator.dart';
 import '../../config/log/logger.dart';
@@ -23,7 +23,8 @@ class DioConsumer implements ApiConsumer {
   DioConsumer({required this.client}) {
     (client.httpClientAdapter as IOHttpClientAdapter).createHttpClient = () {
       HttpClient httpClient = HttpClient();
-      httpClient.badCertificateCallback = (X509Certificate certificate, String host, int port) => true;
+      httpClient.badCertificateCallback =
+          (X509Certificate certificate, String host, int port) => true;
       return httpClient;
     };
 
@@ -42,7 +43,12 @@ class DioConsumer implements ApiConsumer {
   }
 
   @override
-  Future get(String path, {Map<String, dynamic>? queryParameters, bool useAccessToken = false, required BuildContext context}) async {
+  Future get(
+    String path, {
+    Map<String, dynamic>? queryParameters,
+    bool useAccessToken = false,
+    required BuildContext context,
+  }) async {
     try {
       client.options.headers['lang'] = context.locale.languageCode;
       client.options.headers['Accept'] = AppStrings.applicationJson;
@@ -57,7 +63,14 @@ class DioConsumer implements ApiConsumer {
   }
 
   @override
-  Future post(String path, {Map<String, dynamic>? body, Map<String, dynamic>? queryParameters, bool formDataIsEnabled = false, bool useAccessToken = false, required BuildContext context}) async {
+  Future post(
+    String path, {
+    Map<String, dynamic>? body,
+    Map<String, dynamic>? queryParameters,
+    bool formDataIsEnabled = false,
+    bool useAccessToken = false,
+    required BuildContext context,
+  }) async {
     try {
       client.options.headers['lang'] = context.locale.languageCode;
       client.options.headers['Accept'] = AppStrings.applicationJson;
@@ -69,9 +82,14 @@ class DioConsumer implements ApiConsumer {
         Logger.print(title: 'Form Data Enabled');
         client.options.headers[AppStrings.contentType] = AppStrings.multiPart;
       } else {
-        client.options.headers[AppStrings.contentType] = AppStrings.applicationJson;
+        client.options.headers[AppStrings.contentType] =
+            AppStrings.applicationJson;
       }
-      final response = await client.post(path, queryParameters: queryParameters, data: formDataIsEnabled ? FormData.fromMap(body!) : body);
+      final response = await client.post(
+        path,
+        queryParameters: queryParameters,
+        data: formDataIsEnabled ? FormData.fromMap(body!) : body,
+      );
 
       return response;
     } catch (error) {
@@ -80,14 +98,24 @@ class DioConsumer implements ApiConsumer {
   }
 
   @override
-  Future put(String path, {Map<String, dynamic>? body, Map<String, dynamic>? queryParameters, bool useAccessToken = false, required BuildContext context}) async {
+  Future put(
+    String path, {
+    Map<String, dynamic>? body,
+    Map<String, dynamic>? queryParameters,
+    bool useAccessToken = false,
+    required BuildContext context,
+  }) async {
     try {
       client.options.headers['lang'] = context.locale.languageCode;
       client.options.headers['Accept'] = AppStrings.applicationJson;
       if (useAccessToken) {
         client.options.headers['Authorization'] = 'Bearer ';
       }
-      final response = await client.put(path, queryParameters: queryParameters, data: body);
+      final response = await client.put(
+        path,
+        queryParameters: queryParameters,
+        data: body,
+      );
       return response;
     } catch (error) {
       _handleDioError(context, error);
@@ -139,7 +167,9 @@ class DioConsumer implements ApiConsumer {
                 throw const FetchDataException();
 
               case StatusCodes.unProcessableEntity:
-                throw ResponseException(json.decode(error.response?.data)['message']);
+                throw ResponseException(
+                  json.decode(error.response?.data)['message'],
+                );
 
               case StatusCodes.internalServerError:
                 throw const InternalServerErrorException();

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:purity/app/service_locator.dart';
-import 'package:purity/config/log/logger.dart';
-import 'package:purity/config/routes/app_navigator.dart';
-import 'package:purity/core/caching/caching_client.dart';
-import 'package:purity/core/enums/caching_keys.dart';
-import 'package:purity/features/onboarding/presentation/view_model/onboarding_states.dart';
-import 'package:purity/features/onboarding/presentation/widgets/first_step.dart';
-import 'package:purity/features/onboarding/presentation/widgets/second_step.dart';
-import 'package:purity/features/onboarding/presentation/widgets/third_step.dart';
+import 'package:lo2tah/app/service_locator.dart';
+import 'package:lo2tah/config/log/logger.dart';
+import 'package:lo2tah/config/routes/app_navigator.dart';
+import 'package:lo2tah/core/caching/caching_client.dart';
+import 'package:lo2tah/core/enums/caching_keys.dart';
+import 'package:lo2tah/features/onboarding/presentation/view_model/onboarding_states.dart';
+import 'package:lo2tah/features/onboarding/presentation/widgets/first_step.dart';
+import 'package:lo2tah/features/onboarding/presentation/widgets/second_step.dart';
+import 'package:lo2tah/features/onboarding/presentation/widgets/third_step.dart';
 
 import '../../../../config/routes/app_routes.dart';
 import '../../../../core/view_models/app/app_view_model.dart';

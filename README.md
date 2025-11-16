@@ -1,6 +1,8 @@
-# purity
+# Lo2tah
 
-Purity is an Arabic app that aims to enable users to transparently understand the ingredients of food products. With a simple barcode scan, you can discover nutritional facts, allergens, and chemical additives—making informed choices that are best for your health and the environment.
+Lo2tah is a modern, eco-focused food transparency app designed for users in the Arab region.
+It helps you instantly understand what’s inside the products you buy — empowering you to make healthier, cleaner, and
+more sustainable choices
 
 ## Getting Started
 

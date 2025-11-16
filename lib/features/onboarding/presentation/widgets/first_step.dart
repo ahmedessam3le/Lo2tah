@@ -2,10 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:purity/core/utils/assets_manager.dart';
-import 'package:purity/core/utils/colors_manager.dart';
-import 'package:purity/core/utils/strings_manager.dart';
-import 'package:purity/features/onboarding/presentation/widgets/curve_clipper.dart';
+import 'package:lo2tah/core/utils/assets_manager.dart';
+import 'package:lo2tah/core/utils/colors_manager.dart';
+import 'package:lo2tah/core/utils/strings_manager.dart';
+import 'package:lo2tah/features/onboarding/presentation/widgets/curve_clipper.dart';
 
 class FirstStep extends StatelessWidget {
   const FirstStep({super.key});

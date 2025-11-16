@@ -1,4 +1,4 @@
-import 'package:purity/core/utils/strings_manager.dart';
+import 'package:lo2tah/core/utils/strings_manager.dart';
 
 enum Flavor {
   dev('dev', '${AppStrings.appName} Dev'),

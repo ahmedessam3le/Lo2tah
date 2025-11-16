@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "733733637103",
-    "project_id": "purity-cd38a",
-    "storage_bucket": "purity-cd38a.firebasestorage.app"
+    "project_id": "lo2tah-cd38a",
+    "storage_bucket": "lo2tah-cd38a.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:733733637103:android:3ca8784d068906963fc41a",
         "android_client_info": {
-          "package_name": "com.example.purity"
+          "package_name": "com.example.lo2tah"
         }
       },
       "oauth_client": [],
